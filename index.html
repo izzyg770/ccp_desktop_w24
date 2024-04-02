@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/html5reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
     <title>Index</title>
 </head>
 <body>
@@ -22,8 +23,14 @@
     </header>
     <main id = "main">
         <br>
-        <div>
-            <p>Welcome to CCP-HTML, your go-to destination for all things pets, recipes, and travel! Explore a world of captivating content where we cater to your love for furry companions, culinary delights, and globetrotting adventures. </p>
+        <div class="newsletter-container">
+            <h2>Subscribe to Our Newsletter</h2>
+            <form id="newsletterForm">
+                <input type="text" id="fullName" placeholder="Your Name" required>
+                <input type="email" id="emailAddress" placeholder="Your Email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+            <p id="newsletterMessage"></p>
         </div>
     </main>
 </body>

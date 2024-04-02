@@ -170,6 +170,15 @@ nav ul {
     background-color: #f9f9f9;
 }
 
+.newsletter-container form label {
+    margin-bottom: 10px; 
+    display: block;
+}
+
+.newsletter-container form input {
+    margin-bottom: 10px;
+}
+
 input[type="text"],
 input[type="email"],
 button {
@@ -182,13 +191,13 @@ button {
 }
 
 button {
-    background-color: #007bff;
+    background-color: darkgreen;
     color: #fff;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: black;
 }
 
 #newsletterMessage {

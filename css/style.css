@@ -75,7 +75,7 @@ header nav {
     padding: 40px 30px 30px 30px;
 }
 
-#main {
+#main, #recipes-main {
     padding: 10px 10px 10px 10px;
     margin: 0;
 }
@@ -480,6 +480,59 @@ nav ul {
     vertical-align: center;
 }
 
+.treat-container {
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    cursor: pointer;
+    z-index: 1000;
+    text-align: center;
+}  
+.treat-content {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.treat-icon {
+    width: 75px;
+    z-index: 9999;
+    height: 75px;
+    margin-right: 5px;
+    margin-top: 10px;
+    vertical-align: middle;
+    border: none;
+}
+.info-page-container {
+    display: none;
+    z-index: 999;
+    width: 500;
+    height: 750;
+    background-color: white;
+    border: 6px;
+    border-style: groove;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.close-container {
+    margin-top: 20px;
+}
+.give-treat-text {
+    display: inline;
+    vertical-align: middle;
+}
+.info-page {
+    text-decoration: underline;
+    color: blue;
+}
+.heart-gif {
+    position: absolute;
+    z-index: 9999;
+}
+
 @media (min-width: 768px) {
     html {
         font-size: 18px;
@@ -616,5 +669,100 @@ nav ul {
         position: absolute;
         z-index: 9999;
     }
+}
 
+@media(min-width: 1280px) {
+    .pet-grid {
+        margin: 10px;
+        display: grid;
+        padding: 10px 10px 10px 10px;
+        grid-template-columns: 0.5fr 3fr 1.5fr 2.5fr;
+        column-gap: 10px;
+        row-gap: 10px;
+        justify-content: center;
+        border: 3px solid black;
+    }
+    .pet-name {
+        grid-area: 1 / 1 / 3 / 2;
+        background-color: darkblue;
+        color: white;
+        font-size: xx-large;
+        border: 5px groove black;
+        writing-mode: vertical-rl;
+        transform: rotate(-180deg);
+        font-weight: bold;
+    }
+    .pet-main {
+        grid-area: 1 / 2 / 3 / 3;
+    }
+    .pet-likes {
+        grid-area: 1 / 3 / 2 / 4;
+        border: none;
+    }
+    .pet-media-title {
+        grid-area: 1 / 4 / 2 / 5;
+    }
+    .pet-media {
+        grid-area: 2 / 4 / 3 / 5;
+    }
+    .pet-blurb {
+        grid-area: 2 / 3 / 3 / 4;
+    }
+    #recipes-main {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    .recipe-grid {
+        width: 32%;
+        grid-template-columns: 5fr 4fr;
+    }
+    .recipe-name {
+        background-color: darkblue;
+        color: white;
+        font-size: xx-large;
+        border: 5px groove black;
+    }
+    .recipe-main {
+        grid-area: 2 / 1 / 3 / 3;
+    }
+    .recipe-details {
+        grid-area: 3 / 2 / 4 / 3;
+    }
+    .recipe-blurb {
+        grid-area: 4 / 2 / 5 / 3;
+    }
+    .recipe-ingredients {
+        grid-area: 3 / 1 / 4 / 2; 
+    }
+    .recipe-steps {
+        grid-area: 4 / 1 / 5 / 2; 
+        max-height: 450px;
+    }
+    .travel-grid {
+        grid-template-columns: repeat(4, auto);
+    }
+    .travel-name {
+        grid-area: auto / 1 / span 1 / span 4;
+        background-color: darkblue;
+        color: white;
+        font-size: xx-large;
+        border: 5px groove black;
+    }
+    .travel-media-title {
+        grid-area: auto / 1 / span 1 / span 4;
+    }
+    .travel-location, .travel-blurbs {
+        grid-area: auto / 2 / span 1 / span 3;
+        text-align: center;
+        align-items: center;
+    }
+    .travel-main {
+        grid-area: 2 / auto / span 2 / span 1;
+    }
+    .travel-media {
+        grid-area: 6 / auto / span 1 / span 1;
+    }
+    .travel-caption {
+        grid-area: 7 / auto / span 1 / span 1;
+    }
 }
